@@ -423,7 +423,7 @@ pre code { font-size: 15px !important; }
 
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
-.post span.caption { font-size: 75%; padding: 2px; line-height: 0.5cm; display: block; border-bottom: 1px solid grey; }
+span.caption { font-size: 75%; padding: 2px; line-height: 0.5cm; display: block; border-bottom: 1px solid grey; }
 
 .language-python + .language-plaintext { border-left: 1px solid grey; margin-left: 1rem !important; }
 
