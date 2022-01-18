@@ -6,6 +6,11 @@
 
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
-
+	span.caption{		
+		font-size: 75%;		
+		padding: 2px;		
+		line-height: 0.5cm;
+		display: block;
+		border-bottom: 1px solid grey;
 // If you want to turn off dark background for syntax highlighting, comment or delete the below line.
 @import "minima/fastpages-dracula-highlight"; 
