@@ -953,18 +953,35 @@ For sure, it's a good rule of thumb to never draw conclusions too quickly from c
 </h3>
 <p>We start by quoting again Dong <em>et al.</em> (2017), our main source of inspiration for this work:</p>
 <blockquote>
-<p>The first step in the SSA involves creating a trajectory matrix. For a time series $X = (x_1$, $x_2$,...,$x_N)$ and a window length $L = 365$, we define the trajectory matrix as:$$\begin{equation*}
+<p>The first step in the SSA involves creating a trajectory matrix. For a time series $X = (x_1$, $x_2$,...,$x_N)$ and a window length $L = 365$, we define the trajectory matrix as:</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$
+\begin{equation*}
 X = 
 \begin{pmatrix}
-x\_1 &amp; x\_2 &amp; x_3 &amp; \cdots &amp; x\_K\\
-x\_2 &amp; x\_3 &amp; x_4 &amp; \cdots &amp; x\_{K+1}\\
-x\_3 &amp; x\_4 &amp; x_5 &amp; \cdots &amp; x\_{K+2}\\
+x_1 &amp; x_2 &amp; x_3 &amp; \cdots &amp; x_K\\
+x_2 &amp; x_3 &amp; x_4 &amp; \cdots &amp; x_{K+1}\\
+x_3 &amp; x_4 &amp; x_5 &amp; \cdots &amp; x_{K+2}\\
 \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
-x\_L &amp; x\_{L+1} &amp; x\_{L+2} &amp; \vdots &amp; x\_N\\
+x_L &amp; x_{L+1} &amp; x_{L+2} &amp; \vdots &amp; x_N\\
 \end{pmatrix}
 \end{equation*}
 $$
-with $K = N - L + 1$. Then a singular value decomposition (SVD) is performed on the trajectory matrix, providing a decomposition $X = X\_1 + ⋯ + X\_L$. Each of our modes then comes from averaging these matrices $X\_i$ along their anti-diagonal. The mode with the largest singular value always corresponds to the average crime trend. We then typically would look for any modes with an annual periodicity in the first twenty singular values and sum these to produce our seasonal component.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote>
+<p>with $K = N - L + 1$. Then a singular value decomposition (SVD) is performed on the trajectory matrix, providing a decomposition $X = X_1 + ⋯ + X_L$. Each of our modes then comes from averaging these matrices $X_i$ along their anti-diagonal. The mode with the largest singular value always corresponds to the average crime trend. We then typically would look for any modes with an annual periodicity in the first twenty singular values and sum these to produce our seasonal component.</p>
 </blockquote>
 <p>Since we work under two constraints, time $t \ne \infty$ and budget $b\approx0$, we don't go into detail. For those interested in learning more about SSA, see <a href="#fn9">[9]</a> and <a href="#fn10">[10]</a>:Our purpose is to applying SSA technique to Boston following <a href="#fn4">[4]</a> guidelines.</p>
 
