@@ -206,44 +206,30 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">daily</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>2015-06-15    249
-2015-06-16    258
-2015-06-17    235
-2015-06-18    294
-2015-06-19    289
-dtype: int64</pre>
-</div>
-
-</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://h7r.github.io/fast/images/jingle_man.jpg" alt="" title="Edgar Allan Poe was dismissed as a 'The Jingle Man' by Emerson. But who remember Emerson? Time is a bitch."></p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="First-clues-of-seasonality-and-lockdown-effect">
+<a class="anchor" href="#First-clues-of-seasonality-and-lockdown-effect" aria-hidden="true"><span class="octicon octicon-link"></span></a>First clues of seasonality and lockdown effect<a class="anchor-link" href="#First-clues-of-seasonality-and-lockdown-effect"> </a>
+</h3>
+<p>Seasonality is a classic pattern in criminology though still without being well understood by academics. The subject has been studied for over a century, starting with Quetelet <a href="#fn6">[6]</a>, Mister "Average Man", who was an ingenuous believer, like almost all the scientists of his time (19th century), in "natural" or inborn biological causes behind deviance (climate and/or other stupid factors like race, heredity, etc.). In his (narrow) mind, statistics will save the world and the Average Man will replace the old imperfect man great-grandpa was. Here we are. More domestic disputes in summer, why? Maybe the sun making new highs removes some unpleasant ancestral barriers. As a result, the Average Man deviates from the boring statistical mean and the standard deviation of his expected human behavior turns crazy... Maybe. Quetelet's claim: "the violence of the passions predominating in summer, excites to more frequent personal collisions". In other no mother tongue terms: the passions predominating in his brain (whatever the season), excites Quetelet to very frequent confusions between correlation and causation.</p>
+<p>More seriously, as mentioned by Dong <em>et al.</em> (2017) <a href="#fn7">[7]</a>:</p>
+<blockquote>
+<p>Considering one of the most noticeable consequences of global warming is a shift in weather patterns, either locally warming or cooling, there is a need to understand how crime rates may change in response to the new weather patterns.</p>
+</blockquote>
+<p>Less water in some countries, for example, and I bet that the Average Man will shift too. He will deviate to survive and become <em>unpredictable</em>. Welcome to the Extremistan Man. The extremistan studies are born. Bye-bye Quetelet and Mediocristan! Easy.</p>
 
 </div>
-    
-
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -286,18 +272,9 @@ dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="First-clues-of-seasonality-and-lockdown-effect">
-<a class="anchor" href="#First-clues-of-seasonality-and-lockdown-effect" aria-hidden="true"><span class="octicon octicon-link"></span></a>First clues of seasonality and lockdown effect<a class="anchor-link" href="#First-clues-of-seasonality-and-lockdown-effect"> </a>
-</h3>
-<p>Seasonality is a classic pattern in criminology though still without being well understood by academics. The subject has been studied for over a century, starting with Quetelet <a href="#fn6">[6]</a>, Mister "Average Man", who was an ingenuous believer, like almost all the scientists of his time (19th century), in "natural" or inborn biological causes behind deviance (climate and/or other stupid factors like race, heredity, etc.). In his (narrow) mind, statistics will save the world and the Average Man will replace the old imperfect man great-grandpa was. Here we are. More domestic disputes in summer, why? Maybe the sun making new highs removes some unpleasant ancestral barriers. As a result, the Average Man deviates from the boring statistical mean and the standard deviation of his expected human behavior turns crazy... Maybe. Quetelet's claim: "the violence of the passions predominating in summer, excites to more frequent personal collisions". In other no mother tongue terms: the passions predominating in his brain (whatever the season), excites Quetelet to very frequent confusions between correlation and causation.</p>
-<p>More seriously, as mentioned by Dong <em>et al.</em> (2017) <a href="#fn7">[7]</a>:</p>
-<blockquote>
-<p>Considering one of the most noticeable consequences of global warming is a shift in weather patterns, either locally warming or cooling, there is a need to understand how crime rates may change in response to the new weather patterns.</p>
-</blockquote>
-<p>Less water in some countries, for example, and I bet that the Average Man will shift too. He will deviate to survive and become <em>unpredictable</em>. Welcome to the Extremistan Man. The extremistan studies are born. Bye-bye Quetelet and Mediocristan! Easy.</p>
 <p>So this is not very surprising whether the BPD Crime Incident Reports show seasonal variations though obscured by noisy data (bottom left, <a href="#fig1">Fig. 1</a>). We need to build a <em>tool</em> to extract the long-term trend and not be fooled by randomness.</p>
-<p>If we look carefully at the same bottom panel on left in <a href="#fig1">Fig. 1</a>, a substantial hole is drawn at the end of the series. The phenomenon starts in fact shortly before the State of Emergency is declared on March 23, 2020 by Governor Baker, and ends after the Reopening announcement <a href="#fn8">[8]</a> on May 18:this is what we call the <em>lockdown effect</em> (<a href="#fig2">Fig. 2</a>), <em>i.e.</em> an abnormal drop in the number of incidents due to the major part of the population being under strict control, empty streets and shops closed.
-After the economy reopen, the crime quickly reopened too, and climaxed on June 1 for then coming back to its old routine made of sudden peaks and drops – the seasonal oscillations.</p>
+<p>If we look carefully at the same bottom panel on left in <a href="#fig1">Fig. 1</a>, a substantial hole is drawn at the end of the series. The phenomenon starts in fact shortly before the State of Emergency is declared on March 23, 2020 by Governor Baker, and ends after the Reopening announcement <a href="#fn8">[8]</a> on May 18: this is what we call the <em>lockdown effect</em> (<a href="#fig2">Fig. 2</a>), <em>i.e.</em> an abnormal drop in the number of incidents due to the major part of the population being under strict control, empty streets and shops closed.</p>
+<p>After the economy reopen, the crime quickly reopened too, and climaxed on June 1 for then coming back to its old routine made of sudden peaks and drops – the seasonal oscillations.</p>
 <p>We will show <em>infra</em> that the June 1 spike is most likely related to George Floyd protests maybe not so peaceful but running hot in response to police brutality.</p>
 <p>From this point of view, crime – crimes against property more precisely – is nothing but a kind of thermometer. You can use it for analysis purposes or ignore it, the thermometer says that burglary, auto-theft and vandalism have been the best riots indicators during George Floyd protests (<a href="#fig6">Fig. 6</a>). Rinse, repeat: the data shows that these people didn't target <em>persons</em>, but <em>property</em>, at least in Boston. This is why we need good data science. Because truth matters. Don't be afraid to tell the truth. She is often an <em>outlier</em>, a surprising and beautiful outlier. In other words, truth is a "dramatic change" in the data. The truth is that George Floyd died under the ruthless knee of a white police officer.</p>
 <blockquote>
@@ -525,14 +502,6 @@ After the economy reopen, the crime quickly reopened too, and climaxed on June 1
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>However, the violent crimes rate is not converging so well toward a clear seasonal peak, as if spotting the crimes against persons was in fact the real challenge here.</p>
 <p>Is Boston doing better or worse than expected compared to other American cities?</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://h7r.github.io/fast/images/jingle_man.jpg" alt="" title="Edgar Allan Poe was dismissed as a 'The Jingle Man' by Emerson. But who remember Emerson? Time is a bitch."></p>
 
 </div>
 </div>
@@ -930,7 +899,7 @@ $$
 <span id="fn14">[14] Michele Berger - Stigma of criminal record stays with individual, regardless of crime type, conviction. August 17, 2016: </span> <a href="https://phys.org/news/2016-08-stigma-criminal-individual-crime-conviction.html">https://phys.org/news/2016-08-stigma-criminal-individual-crime-conviction.html</a>
 </li>
 <li>
-<span id="fn15">[15] Kathellen McGrory and Neil Bedi - Targeted. Sept. 3, 2020: </span>  <a href="https://projects.tampabay.com/projects/2020/investigations/police-pasco-sheriff-targeted/intelligence-led-policing/?fbclid=IwAR3b4nQWPc8-4gryIjtoa1pCx_KWj84taNAN7oTEixicFEr45L3-6L1rRYk">https://projects.tampabay.com/projects/2020/investigations/police-pasco-sheriff-targeted/intelligence-led-policing/?fbclid=IwAR3b4nQWPc8-4gryIjtoa1pCx_KWj84taNAN7oTEixicFEr45L3-6L1rRYk</a>
+<span id="fn15">[15] Kathellen McGrory and Neil Bedi - Targeted. Sept. 3, 2020: </span>   <a href="https://projects.tampabay.com/projects/2020/investigations/police-pasco-sheriff-targeted/intelligence-led-policing">https://projects.tampabay.com/projects/2020/investigations/police-pasco-sheriff-targeted/intelligence-led-policing</a>
 </li>
 <li>
 <span id="fn16">[16] Cf: </span> <a href="http://web.cs.ucla.edu/~kwchang/publications_area/">http://web.cs.ucla.edu/~kwchang/publications_area/</a>
