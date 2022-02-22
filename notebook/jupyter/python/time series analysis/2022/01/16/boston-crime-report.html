@@ -150,7 +150,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Size-doesn't-matter:-all-we-need-is-love-and-good-data">Size doesn&#39;t matter: all we need is love and good data </a></li>
 <li class="toc-entry toc-h3"><a href="#The-trajectory-space-of-the-crime">The trajectory space of the crime </a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#long-term-trends-extraction-(the-signal)">long-term trends extraction (the signal) </a></li>
+<li class="toc-entry toc-h4"><a href="#Long-term-trends-extraction-(the-signal)">Long-term trends extraction (the signal) </a></li>
 <li class="toc-entry toc-h4"><a href="#Seasonal-components-extraction-(the-noise)">Seasonal components extraction (the noise) </a></li>
 </ul>
 </li>
@@ -199,7 +199,7 @@ window.onload = wrap_img;
 </blockquote>
 <p>How do you feel? Better, right?</p>
 <p>Change the scale and you tell another story.</p>
-<p>The truth that matters, the more important knowledge, says the detective Dupin-Poe, is <em>invariably superficial</em>, and lies in the valleys where we seek her. If not, we perplex and enfeeble thought. The Bostonian expert in solving enigmas is pro-Occam's razor. No need to undue profundity. Since the <em>purloined letter</em> is not hidden at all <a href="#fn3">[3]</a>, why should I look in a well? "Show the data!", warms Jeef Leek <a href="#fn4">[4]</a>.</p>
+<p>The truth that matters, the more important knowledge, says the detective Dupin-Poe, is <em>invariably superficial</em>, and lies in the valleys where we seek her. If not, we perplex and enfeeble thought. The Bostonian expert in solving enigmas is pro-Occam's razor. No need to undue profundity. Since "The Purloined letter" is <em>hidden in plain sight</em> <a href="#fn3">[3]</a>, why should I look in a well? "Show the data!", warms Jeef Leek <a href="#fn4">[4]</a>.</p>
 <p>So, this is a story of peaks and valleys, like in a Dow Jones chart. "Pictures are undervalued in science", wrote Benoît Mandelbrot in his excellent book <em>The (Mis)Behavior of Markets</em>. We agree with the French mathematician. We believe that pictures, good pictures and not <em>ridiculograms</em> <a href="#fn5">[5]</a>, are the royal road to <em>epiphanies</em>.</p>
 <p>In this study, charts helped us a lot. Despite the noisy data, an unexpected pattern was showing up insistently from the very start:like temperature or influenza, <em>crime is seasonal</em>. Peak fever usually occurs in summer. Evidence pop up all over the data. Maybe it will be found, to paraphrase again Edgar Allan Poe, that data analysts are never otherwise than sniffer dogs following a promising track.</p>
 
@@ -251,49 +251,22 @@ window.onload = wrap_img;
 <h3 id="First-clues-of-seasonality-and-lockdown-effect">
 <a class="anchor" href="#First-clues-of-seasonality-and-lockdown-effect" aria-hidden="true"><span class="octicon octicon-link"></span></a>First clues of seasonality and lockdown effect<a class="anchor-link" href="#First-clues-of-seasonality-and-lockdown-effect"> </a>
 </h3>
-<p>Seasonality is a classic pattern in criminology though still without being well understood by academics. The subject has been studied for over a century, starting with Quetelet <a href="#fn6">[6]</a>, Mister "Average Man", who was an ingenuous believer, like almost all the scientists of his time (19th century), in "natural" or inborn biological causes behind deviance (climate and/or other stupid factors like race, heredity, etc.). In his (narrow) mind, statistics will save the world and the Average Man will replace the old imperfect man great-grandpa was. Here we are. More domestic disputes in summer, why? Maybe the sun making new highs removes some unpleasant ancestral barriers. As a result, the Average Man deviates from the boring statistical mean and the standard deviation of his expected human behavior turns crazy... Maybe. Quetelet: "the violence of the passions predominating in summer, excites to more frequent personal collisions". In other no mother tongue terms: the passions predominating in his brain (whatever the season), excites Quetelet to very frequent confusions between correlation and causation.</p>
+<p>Seasonality is a classic pattern in criminology though still without being well understood by academics. The subject has been studied for over a century, starting with Quetelet <a href="#fn6">[6]</a>, Mister "Average Man", who was an ingenuous believer, like almost all the scientists of his time (19th century), in "natural" or inborn biological causes behind deviance (climate and/or other stupid factors like race, heredity, etc.). In his (narrow) mind, statistics will save the world and the Average Man will replace the old imperfect man great-grandpa was. Here we are. More domestic disputes in summer, why? Maybe the sun making new highs removes some unpleasant ancestral barriers. As a result, the Average Man deviates from the boring statistical mean and the standard deviation of his expected human behavior turns crazy... Maybe. Quetelet's claim: "the violence of the passions predominating in summer, excites to more frequent personal collisions". In other no mother tongue terms: the passions predominating in his brain (whatever the season), excites Quetelet to very frequent confusions between correlation and causation.</p>
 <p>More seriously, as mentioned by Dong <em>et al.</em> (2017) <a href="#fn7">[7]</a>:</p>
 <blockquote>
 <p>Considering one of the most noticeable consequences of global warming is a shift in weather patterns, either locally warming or cooling, there is a need to understand how crime rates may change in response to the new weather patterns.</p>
 </blockquote>
 <p>Less water in some countries, for example, and I bet that the Average Man will shift too. He will deviate to survive and become <em>unpredictable</em>. Welcome to the Extremistan Man. The extremistan studies are born. Bye-bye Quetelet and Mediocristan! Easy.</p>
-<p>So this is not very surprising whether the BPD Crime Incident Reports shows seasonal variations though obscured by noisy data (bottom left, <a href="#fig1">Fig. 1</a>). We need to build a <em>tool</em> to extract the long-term trend.</p>
-<p>If we look carefully at the same bottom panel on left in <a href="#fig1">Fig. 1</a>, a substantial hole is drawn at the end of the series. The phenomenon starts in fact shortly before the State of Emergency is declared on March 23, 2020 by Governor Baker, and ends after Reopening announcement <a href="#fn8">[8]</a> on May 18:this is what we call the <em>lockdown effect</em> (<a href="#fig2">Fig. 2</a>), <em>i.e.</em> an abnormal drop in the number of incidents due to the major part of the population being under strict control, empty streets and shops closed.
+<p>So this is not very surprising whether the BPD Crime Incident Reports shows seasonal variations though obscured by noisy data (bottom left, <a href="#fig1">Fig. 1</a>). We need to build a <em>tool</em> to extract the long-term trend and not be fooled by randomness.</p>
+<p>If we look carefully at the same bottom panel on left in <a href="#fig1">Fig. 1</a>, a substantial hole is drawn at the end of the series. The phenomenon starts in fact shortly before the State of Emergency is declared on March 23, 2020 by Governor Baker, and ends after the Reopening announcement <a href="#fn8">[8]</a> on May 18:this is what we call the <em>lockdown effect</em> (<a href="#fig2">Fig. 2</a>), <em>i.e.</em> an abnormal drop in the number of incidents due to the major part of the population being under strict control, empty streets and shops closed.
 After the economy reopen, the crime quickly reopened too, and climaxed on June 1 for then coming back to its old routine made of sudden peaks and drops – the seasonal oscillations.</p>
 <p>We will show <em>infra</em> that the June 1 spike is most likely related to George Floyd protests maybe not so peaceful but running hot in response to police brutality.</p>
-<p>From this point of view, crime – crimes against property more precisely – is nothing but a kind of thermometer. Take it (for analysis) or break it (with imprisonment and <em>incapacitation effect</em>), the thermometer says that burglary, auto-theft and vandalism have been the best riots indicators during George Floyd protests (<a href="#fig6">Fig. 6</a>). Rinse, repeat: the data shows that these people didn't target <em>persons</em>, but <em>property</em>, at least in Boston. This is why we need good data science. Because truth matters. Don't be afraid to tell the truth. She is often an <em>outlier</em>, a surprising and beautiful outlier. In other words, truth is a "dramatic change" in the data. The truth is that George Floyd died under the ruthless knee of a white police officer.</p>
+<p>From this point of view, crime – crimes against property more precisely – is nothing but a kind of thermometer. You can use it for analysis purposes or ignore it, the thermometer says that burglary, auto-theft and vandalism have been the best riots indicators during George Floyd protests (<a href="#fig6">Fig. 6</a>). Rinse, repeat: the data shows that these people didn't target <em>persons</em>, but <em>property</em>, at least in Boston. This is why we need good data science. Because truth matters. Don't be afraid to tell the truth. She is often an <em>outlier</em>, a surprising and beautiful outlier. In other words, truth is a "dramatic change" in the data. The truth is that George Floyd died under the ruthless knee of a white police officer.</p>
 <blockquote>
 <p>[...] social catastrophes can override any seasonality and lead to dramatic changes in future crime rates. <em>(Dong </em>et al.<em>, 2017)</em></p>
 </blockquote>
 <p>That's it.</p>
 <p>So, please, be careful when you remove outliers!</p>
-<p>The right panel in <a href="#fig1">Fig. 1</a> shows also that offense types distribution is heavily unbalanced, exhibiting a large fat tail typical of a Pareto distribution skewed to the right. As a matter of fact, 10,5% of offense types account for 72,4% of the incidents, which is very close to the 80/20 rule <a href="#fn9">[9]</a>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>
-</p>
-<center>
-    <div class="jekyll-twitter-plugin">
-<blockquote class="twitter-tweet">
-<p lang="en" dir="ltr">Pareto (work on the 20% that brings the 80%) is not only about prioritization.<br><br>It’s also about avoiding working on spurious coincidences - the noise that caused that small correlation which won’t repeat.</p>— Luca Dellanna (@DellAnnaLuca) <a href="https://twitter.com/DellAnnaLuca/status/1311671141816242177?ref_src=twsrc%5Etfw">October 1, 2020</a>
-</blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-</center>
-
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Therefore, if we want to evaluate correctly the success —or the failure— of the public safety policy at Boston, it would be worth focusing only on the most relevant offense categories.</p>
 
 </div>
 </div>
@@ -340,8 +313,7 @@ After the economy reopen, the crime quickly reopened too, and climaxed on June 1
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Another picture of the data.</p>
-<p>A heatmap is a useful visualization technique to show in two dimensions the magnitude of a phenomenon with color variations. Since <a href="#fig1">Fig. 1</a> gives some <em>clues</em> of seasonality we decided to investigate, by reorganizing our daily time series into a 2d-array —x-axis for weekdays, y-axis for months—, the seasonal pattern if present should become evident once generated in the appropriate visual format.</p>
+<p>The right panel in <a href="#fig1">Fig. 1</a> shows also that offense types distribution is heavily unbalanced, exhibiting a large fat tail typical of a Pareto distribution skewed to the right. As a matter of fact, 10,5% of offense types account for 72,4% of the incidents, which is very close to the 80/20 rule <a href="#fn9">[9]</a>.</p>
 
 </div>
 </div>
@@ -349,7 +321,27 @@ After the economy reopen, the crime quickly reopened too, and climaxed on June 1
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a id="fig2"></a></p>
+<p>
+</p>
+<center>
+    <div class="jekyll-twitter-plugin">
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">Pareto (work on the 20% that brings the 80%) is not only about prioritization.<br><br>It’s also about avoiding working on spurious coincidences - the noise that caused that small correlation which won’t repeat.</p>— Luca Dellanna (@DellAnnaLuca) <a href="https://twitter.com/DellAnnaLuca/status/1311671141816242177?ref_src=twsrc%5Etfw">October 1, 2020</a>
+</blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</center>
+
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Therefore, if we want to evaluate correctly the success —or the failure— of the public safety policy at Boston, it would be worth focusing only on the most relevant offense categories.</p>
+<p>Another picture of the data.</p>
+<p>A heatmap is a useful visualization technique to show in two dimensions the magnitude of a phenomenon with color variations. Since <a href="#fig1">Fig. 1</a> gives some <em>clues</em> of seasonality we decided to investigate, by reorganizing our daily time series into a 2d-array —x-axis for weekdays, y-axis for months—, the seasonal pattern if present should become evident once generated in the appropriate visual format.</p>
 
 </div>
 </div>
@@ -415,7 +407,7 @@ For sure, it's a good rule of thumb to never draw conclusions too quickly from c
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>By reducing our sample size and selecting carefully the offense types, our goal is to remove bias in the data collected by agents potentially involved in a <em>race for results</em> ("get those numbers and come back with them"), which lead in the past to serious misconducts <a href="#fn13">[13]</a>.</p>
+<p>By reducing our sample size and selecting carefully the offense types, our goal is to remove bias in the data collected by agents potentially involved in a <em>race for results</em> ("get those numbers and come back with them"), which may lead to serious misconducts <a href="#fn13">[13]</a>.</p>
 <p>The UCR Part I crimes <a href="#fn8">[8]</a>, or Index Crimes, are divided into two categories: violent crimes (<em>crime against persons</em>) and property crimes (<em>crime against property</em>):</p>
 <table>
 <thead>
@@ -610,8 +602,8 @@ $$
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="long-term-trends-extraction-(the-signal)">
-<a class="anchor" href="#long-term-trends-extraction-(the-signal)" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>long-term trends extraction (the signal)</em><a class="anchor-link" href="#long-term-trends-extraction-(the-signal)"> </a>
+<h4 id="Long-term-trends-extraction-(the-signal)">
+<a class="anchor" href="#Long-term-trends-extraction-(the-signal)" aria-hidden="true"><span class="octicon octicon-link"></span></a><em>Long-term trends extraction (the signal)</em><a class="anchor-link" href="#Long-term-trends-extraction-(the-signal)"> </a>
 </h4>
 <p>The Index Crimes in Boston are slowly falling accordingly to the national tendency <a href="#fn11">[11]</a>, but this is due above all to a sharp decline in property crimes frequency, while violent crimes long-term trend is flat as a hell (<a href="#fig5">Fig. 5</a>). Due to very low amplitude, annual variations for violent crimes would be almost impossible to detect without the SSA technique.</p>
 <p>Back to the original dataset. Three offense types exhibit the same outlier  (<a href="#fig6">Fig. 6</a>):</p>
